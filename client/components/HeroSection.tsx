@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { SiLeetcode } from "react-icons/si";
 
 export default function HeroSection() {
   const scrollToNext = () => {
@@ -84,8 +85,7 @@ export default function HeroSection() {
               Blockchain & Full Stack Developer
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Final-year BTech student passionate about building innovative web
-              applications and blockchain solutions that make a difference.
+            Code is not just about solving problems — it’s about shaping the future with every solution
             </p>
           </motion.div>
 
@@ -101,6 +101,11 @@ export default function HeroSection() {
                 icon: Github,
                 href: "https://github.com/Basusoumik2003",
                 label: "GitHub",
+              },
+              {
+                icon:SiLeetcode ,
+                href: "https://leetcode.com/u/basusoumik/",
+                label: "LeetCode",
               },
               {
                 icon: Linkedin,

@@ -27,17 +27,17 @@ export default function AchievementsSection() {
       category: "Hackathon",
       date: "2025",
       image: "/InnovateX.svg",
-      certificate: "/Innovate.pdf",
+      certificate: "/certificates/Innovate.pdf",
       icon: Trophy,
     },
     {
       id: "2",
-      title: "TSS Hackathon Winner",
-      description: "1st place winner in the Technical Student Society hackathon for developing a blockchain-based voting system. Implemented secure, transparent voting mechanisms using smart contracts.",
-      category: "Competition",
-      date: "2023",
+      title: "Backend & Blockchain Development internship ",
+      description: "Worked on backend development and blockchain integration, including APIs, databases, and smart contracts for secure applications.",
+      category: "Internship",
+      date: "2025",
       image: "/placeholder.svg",
-      certificate: "/Resume 2025.pdf",
+      certificate: "/certificates/Internship.pdf",
       icon: Award,
     },
     {
@@ -144,7 +144,7 @@ export default function AchievementsSection() {
               >
                 {/* Image Container */}
                 <div className="relative h-48 overflow-hidden">
-                  <div 
+                  <div
                     className="w-full h-full bg-gradient-to-br from-portfolio-gradient-start/20 to-portfolio-gradient-end/20 flex items-center justify-center cursor-pointer"
                     onClick={() => handleImageClick(achievement)}
                   >
@@ -168,11 +168,11 @@ export default function AchievementsSection() {
                       {achievement.date}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold mb-2 line-clamp-2">
                     {achievement.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
                     {achievement.description}
                   </p>
@@ -186,17 +186,18 @@ export default function AchievementsSection() {
                       <Eye size={16} />
                       View
                     </button>
-                    {achievement.certificate && (
+                    {selectedAchievement?.certificate && (
                       <a
-                        href={achievement.certificate}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-3 py-2 text-sm border border-border rounded-lg hover:bg-muted transition-colors"
+                        href={`/certificates/${selectedAchievement.certificate}`}
+                        download
+                        className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
                       >
                         <Download size={16} />
-                        Cert
+                        Download Certificate
                       </a>
                     )}
+
+
                   </div>
                 </div>
               </motion.div>
@@ -261,7 +262,7 @@ export default function AchievementsSection() {
                   <p className="text-muted-foreground">Certificate/Image Preview</p>
                 </div>
               </div>
-              
+
               <p className="text-muted-foreground mb-6">
                 {selectedAchievement.description}
               </p>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import resumeFile from "../../public/Soumik_Basu_Resume (8).pdf";
 
 interface NavigationProps {
   activeSection?: string;
@@ -37,9 +38,8 @@ export default function Navigation({ activeSection }: NavigationProps) {
   };
 
   const handleResumeDownload = () => {
-    // This would trigger the resume download
     const link = document.createElement("a");
-    link.href = "/api/resume/download"; // Backend endpoint
+    link.href = resumeFile;
     link.download = "Soumik_Basu_Resume.pdf";
     link.click();
   };

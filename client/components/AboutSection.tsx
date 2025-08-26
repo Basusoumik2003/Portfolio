@@ -78,11 +78,7 @@ export default function AboutSection() {
                 blockchain technology.
               </p>
               <p className="text-foreground/80 text-lg leading-relaxed">
-                With experience in React, Node.js, Solidity, and modern web
-                technologies, I enjoy tackling complex problems and turning
-                ideas into reality. I've participated in multiple hackathons
-                including Smart India Hackathon and various technical
-                competitions.
+              With hands-on experience in React, Node.js, Solidity, and modern web technologies, I specialize in building secure and scalable backend systems powered by microservices and blockchain. I enjoy solving complex challenges and have showcased my skills through multiple hackathons, including the Smart India Hackathon, along with various technical competitions.
               </p>
               <p className="text-foreground/80 text-lg leading-relaxed">
                 When I'm not coding, you'll find me exploring new technologies,
